@@ -1,65 +1,66 @@
-# AutoInsulin
+# Intelligent Insulin Management
 
-## Predictive Insulin Decision Support Using Real-Time Autonomic Stress Signals
+> Turning scattered physiological and treatment signals into early, evidence-based insight.
 
-AutoInsulin is an AI-powered decision support system that predicts changes in insulin demand by analyzing real-time autonomic nervous system activity from wearable physiological signals. Instead of reacting only after blood glucose changes, AutoInsulin aims to provide proactive insulin dose recommendations by identifying physiological stress before significant glucose fluctuations occur.
+## Overview
 
----
+Medication non-adherence is often invisible between two clinical visits. A prescription may clearly state what a patient is expected to take, while the real-world pattern of insulin use can gradually change through missed doses, irregular timing, changing routines, or other factors.
 
-# Problem Statement
+Our solution addresses this gap by combining multiple signals instead of relying on a single indicator.
 
-Current insulin pumps and Continuous Glucose Monitoring (CGM) systems primarily rely on blood glucose measurements to guide insulin therapy. However, insulin requirements are influenced by more than glucose levels alone.
+The system brings together:
 
-Physiological stress, autonomic nervous system activity, and metabolic state can alter insulin sensitivity before noticeable glucose changes occur. Existing systems largely ignore these predictive physiological signals, resulting in reactive rather than proactive insulin management.
+- Wearable physiological signals
+- Glucose patterns
+- Insulin-use information
+- Refill history
+- Treatment history
+- Patient-specific patterns
 
----
+These signals are processed and analysed to identify changes that may indicate a meaningful disruption in insulin use.
 
-# Our Solution
-
-AutoInsulin introduces a wearable-driven machine learning framework that continuously monitors:
-
-- Electrodermal Activity (EDA)
-- Heart Rate
-- Skin Temperature
-
-These physiological signals are processed in real time to classify the user's autonomic state into one of three categories:
-
-- Sympathetic
-- Relaxed
-- Parasympathetic
-
-The detected autonomic state is then used as an additional decision-support input to recommend personalized insulin dose adjustments before significant glucose excursions occur.
+The goal is not to assume that a patient is non-adherent. Instead, the system provides **evidence and confidence around emerging patterns**, allowing earlier review and intervention.
 
 ---
 
-# System Workflow
+## The Problem
+
+A medication can be prescribed correctly and still fail to produce the expected outcome.
+
+The difficulty is that medication non-adherence is often not directly visible between appointments.
+
+A single missed dose may mean very little.
+
+But when small changes begin appearing across several signals, they may form a meaningful pattern.
+
+Our system is designed to connect these otherwise separate clues.
+
+---
+
+## Our Approach
+
+### From signals → intelligence → insight
+
+The solution follows a multi-stage pipeline:
 
 ```text
-Wearable Device
-       │
-       ▼
-Real-Time Signal Acquisition
-(EDA • Heart Rate • Skin Temperature)
-       │
-       ▼
+Wearable & Patient Data
+          ↓
 Signal Processing
-Filtering • Normalization • Segmentation
-       │
-       ▼
+          ↓
 Feature Extraction
-       │
-       ▼
-Machine Learning Model
-       │
-       ▼
-Autonomic State Classification
-(Sympathetic | Relaxed | Parasympathetic)
-       │
-       ▼
-Insulin Dose Recommendation
-```
+          ↓
+AI-Based Analysis
+          ↓
+Multi-Signal Correlation
+          ↓
+Pattern Detection
+          ↓
+Evidence + Confidence
+          ↓
+Early Clinical Review
 
----
+
 
 # Key Features
 
