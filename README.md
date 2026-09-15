@@ -1,163 +1,81 @@
-# Intelligent Insulin Management
+# AutoInsulin — Intelligent Insulin Management
 
-> Turning scattered physiological and treatment signals into early, evidence-based insight.
-
-## Overview
-
-Medication non-adherence is often invisible between two clinical visits. A prescription may clearly state what a patient is expected to take, while the real-world pattern of insulin use can gradually change through missed doses, irregular timing, changing routines, or other factors.
-
-Our solution addresses this gap by combining multiple signals instead of relying on a single indicator.
-
-The system brings together:
-
-- Wearable physiological signals
-- Glucose patterns
-- Insulin-use information
-- Refill history
-- Treatment history
-- Patient-specific patterns
-
-These signals are processed and analysed to identify changes that may indicate a meaningful disruption in insulin use.
-
-The goal is not to assume that a patient is non-adherent. Instead, the system provides **evidence and confidence around emerging patterns**, allowing earlier review and intervention.
+> Turning physiological and treatment-related signals into early, evidence-based insights for personalized diabetes management.
 
 ---
 
-## The Problem
+## 👥 Team Techno Baaz
 
-A medication can be prescribed correctly and still fail to produce the expected outcome.
+**Institution:** NMAM Institute of Technology
 
-The difficulty is that medication non-adherence is often not directly visible between appointments.
+### Team Members
 
-A single missed dose may mean very little.
-
-But when small changes begin appearing across several signals, they may form a meaningful pattern.
-
-Our system is designed to connect these otherwise separate clues.
+1. **Nireeksha Shetty**
+2. **Snigdha S Shetty**
+3. **Preethika**
+4. **Rudresh**
 
 ---
 
-## Our Approach
+# 🩺 About AutoInsulin
 
-### From signals → intelligence → insight
+**AutoInsulin** is a research and innovation prototype that explores the use of wearable physiological signals and machine learning to support intelligent and personalized diabetes management.
 
-The solution follows a multi-stage pipeline:
+The system analyzes physiological signals and classifies the user's autonomic state into three categories:
+
+- **Sympathetic**
+- **Relaxed**
+- **Parasympathetic**
+
+These physiological states can provide additional context about autonomic activity and stress-related physiological patterns.
+
+The long-term vision of AutoInsulin is to combine physiological signals with glucose patterns, insulin-use information, refill history, treatment history, and patient-specific patterns to provide evidence-based decision support for diabetes care.
+
+The system is designed to identify meaningful patterns rather than making assumptions about a patient's condition.
+
+> **Important:** AutoInsulin is a research prototype. It does not automatically calculate, prescribe, or administer insulin doses and is not intended for clinical use.
+
+---
+
+# 🚨 Problem Statement
+
+Diabetes management is a continuous process, but clinical assessment is often performed at specific intervals.
+
+Between clinical visits, changes in physiological state, daily routines, stress, physical activity, and treatment patterns may occur without being captured in a structured way.
+
+A single physiological change may not be significant.
+
+However, multiple changes appearing across different physiological signals may provide useful information about an individual's current physiological condition.
+
+The challenge is to process these signals and convert them into meaningful information that can support healthcare professionals and future intelligent diabetes-management systems.
+
+### Problem We Address
+
+> **How can wearable physiological signals be processed using machine learning to identify autonomic-state patterns and provide useful insights for personalized diabetes-management support?**
+
+---
+
+# 💡 Proposed Solution
+
+AutoInsulin uses a machine-learning-based physiological analysis pipeline.
+
+The system takes physiological time-series signals as input, processes them, extracts meaningful features, and uses a machine-learning model to classify the user's autonomic state.
+
+### Overall Pipeline
 
 ```text
-Wearable & Patient Data
-          ↓
-Signal Processing
-          ↓
-Feature Extraction
-          ↓
-AI-Based Analysis
-          ↓
-Multi-Signal Correlation
-          ↓
-Pattern Detection
-          ↓
-Evidence + Confidence
-          ↓
-Early Clinical Review
-
-
-
-# Key Features
-
-- Real-time wearable physiological monitoring
-- Machine learning-based autonomic state classification
-- Multimodal analysis using EDA, heart rate, and skin temperature
-- Predictive insulin decision support
-- User-friendly mobile application
-- Personalized insulin recommendations based on physiological state
-
----
-
-# Machine Learning Pipeline
-
-### Input Signals
-
-- Electrodermal Activity (EDA)
-- Heart Rate
-- Skin Temperature
-
-### Signal Processing
-
-- Noise Removal
-- Filtering
-- Normalization
-- Segmentation
-- Feature Extraction
-
-### Model Output
-
-- Sympathetic State
-- Relaxed State
-- Parasympathetic State
-
----
-
-# Mobile Application
-
-The companion mobile application provides:
-
-- Live physiological monitoring
-- Current autonomic state
-- Stress detection alerts
-- Insulin dose recommendations
-- Historical physiological trends
-- Personalized insights
-
----
-
-# Expected Impact
-
-AutoInsulin aims to:
-
-- Enable proactive diabetes management
-- Improve personalization of insulin recommendations
-- Reduce the likelihood of glucose excursions
-- Support informed insulin therapy decisions
-- Enhance the quality of life for insulin-dependent individuals
-
----
-
-# Technology Stack
-
-- Python
-- Machine Learning
-- Signal Processing
-- Wearable Biosensors
-- Mobile Application
-- GitHub
-
----
-
-# Future Scope
-
-- Integration with Continuous Glucose Monitoring (CGM) systems
-- Smart insulin pump compatibility
-- Personalized adaptive machine learning models
-- Cloud-based remote monitoring
-- Clinical validation through pilot studies
-
----
-
-# Disclaimer
-
-AutoInsulin is a research prototype developed for educational, research, and innovation purposes. It is not intended for clinical use or medical decision-making without appropriate clinical validation, regulatory approval, and healthcare supervision.
-
----
-
-# Team
-
-- Nireeksha Shetty
-- Preethika
-- Snigdha S Shetty
-- Rudresh
-
----
-
-## License
-
-This project is developed for research and hackathon purposes. All rights reserved by the project team.
+Wearable Physiological Signals
+            ↓
+      Signal Processing
+            ↓
+      30-Second Windowing
+            ↓
+      Feature Extraction
+            ↓
+      Machine Learning
+            ↓
+    Autonomic State Prediction
+            ↓
+    Prediction Probability
+            ↓
+       Dashboard Insight
